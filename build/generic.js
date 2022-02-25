@@ -10,5 +10,3 @@ function myData(value) {
 }
 console.log(myData("Nugraha").length);
 console.log(myData(1234));
-var arrowFunc = function (value) {
-};
