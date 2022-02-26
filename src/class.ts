@@ -10,12 +10,6 @@ export class User{
         return this.name;
     }
 }
-export class User2{
-    constructor(public name: string) {
-    }
-}
-// let user = new User2("Nugraha");
-// console.log(user);
 
 // inheritance
 
@@ -43,6 +37,7 @@ class Admin extends User {
         return "static method";
     }
 
+    // setter dan getter
     set email(val: string) {
         if(val.length < 5){
             this._email = "Email terlalu pendek";
