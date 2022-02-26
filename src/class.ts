@@ -23,6 +23,7 @@ class Admin extends User {
         this.phone = phone;
     }
 
+    // static property
     static getRoleName: string = "Static Properties";
 
     // method
@@ -37,7 +38,7 @@ class Admin extends User {
         return "static method";
     }
 
-    // setter dan getter
+    // setter dan getter 
     set email(val: string) {
         if(val.length < 5){
             this._email = "Email terlalu pendek";
@@ -57,5 +58,6 @@ admin.getRole();
 admin.email = "iqbal@gmail.com";
 // console.log(admin.email);
 
+// panggil static methods
 let admin2 = Admin.getNameRole();
 console.log(admin2);
