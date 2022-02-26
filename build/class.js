@@ -15,7 +15,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.User2 = exports.User = void 0;
+exports.User = void 0;
 var User = /** @class */ (function () {
     function User(name, age) {
         var _this = this;
@@ -31,15 +31,6 @@ var User = /** @class */ (function () {
     return User;
 }());
 exports.User = User;
-var User2 = /** @class */ (function () {
-    function User2(name) {
-        this.name = name;
-    }
-    return User2;
-}());
-exports.User2 = User2;
-// let user = new User2("Nugraha");
-// console.log(user);
 // inheritance
 var Admin = /** @class */ (function (_super) {
     __extends(Admin, _super);
@@ -67,6 +58,7 @@ var Admin = /** @class */ (function (_super) {
         get: function () {
             return this._email;
         },
+        // setter dan getter 
         set: function (val) {
             if (val.length < 5) {
                 this._email = "Email terlalu pendek";
@@ -78,6 +70,7 @@ var Admin = /** @class */ (function (_super) {
         enumerable: false,
         configurable: true
     });
+    // static property
     Admin.getRoleName = "Static Properties";
     return Admin;
 }(User));
@@ -87,5 +80,6 @@ admin.setName("asd");
 admin.getRole();
 admin.email = "iqbal@gmail.com";
 // console.log(admin.email);
+// panggil static methods
 var admin2 = Admin.getNameRole();
 console.log(admin2);
